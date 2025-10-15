@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect} from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Mail } from "lucide-react";
-import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate  } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link, useLocation, useNavigate  } from "react-router-dom";
 import Notes from "./Notes";
 
 function Home() {
