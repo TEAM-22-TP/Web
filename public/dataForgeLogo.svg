@@ -4,8 +4,8 @@
   <rect width="800" height="400" fill="none"/>
 
   <!-- Circles with tech names -->
-  <circle cx="240" cy="80" r="55" fill="#F4B25B"/>
-  <text x="240" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="20" fill="white">Python</text>
+  <circle cx="270" cy="80" r="55" fill="#F4B25B"/>
+  <text x="270" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="20" fill="white">Python</text>
 
   <circle cx="460" cy="60" r="55" fill="#8A6BD6"/>
   <text x="460" y="67" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="20" fill="white">PyTorch</text>
@@ -17,7 +17,8 @@
   <text x="220" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="18" fill="white">TensorFlow</text>
 
   <circle cx="400" cy="320" r="55" fill="#518BCC"/>
-  <text x="400" y="327" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="18" fill="white">IoT Arduino</text>
+  <text x="400" y="317" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="18" fill="white">IoT</text>
+  <text x="400" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="18" fill="white">Arduino</text>
 
   <circle cx="580" cy="280" r="55" fill="#48A1B9"/>
   <text x="580" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="20" fill="white">React.js</text>
