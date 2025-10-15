@@ -30,22 +30,16 @@ export default function App() {
 
       {/* HERO SECTION */}
       <section className="min-h-screen flex flex-col justify-center items-center bg-transparent text-center p-8">
-        <motion.h1
-          className="text-6xl font-extrabold mb-6 drop-shadow-lg"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Team 22
-        </motion.h1>
-        <p className="text-lg mb-8 max-w-xl opacity-90">
-          We are seven passionate software engineering students who love creating, solving, and building together.
-        </p>
+        <img
+          src="/dataForgeLogo.svg"
+          alt="DataForge Logo"
+          // className="w-[320px] sm:w-[420px] md:w-[500px] drop-shadow-2xl select-none"
+        />
         <button
           onClick={scrollToAbout}
           className="px-8 py-3 bg-white/90 text-blue-700 rounded-full font-semibold shadow hover:scale-105 transition"
         >
-          Learn More ↓
+          About Us ↓
         </button>
       </section>
 
@@ -56,11 +50,7 @@ export default function App() {
       >
         <h2 className="text-4xl font-bold mb-6 text-blue-300">About Us</h2>
         <p className="max-w-3xl text-gray-200 text-lg leading-relaxed">
-          Team 22 is a group of seven dedicated software engineering students united by curiosity,
-          creativity, and a drive to build meaningful digital experiences. Our mission is to learn,
-          collaborate, and push boundaries in areas such as web development, cloud systems, and
-          AI-assisted solutions. Each of us brings unique skills — from backend logic to user-centered design —
-          and we’re passionate about crafting software that’s elegant, scalable, and fun to use.
+          Náš tím pozostáva zo siedmich študentov inžinierskeho štúdia na Fakulte informatiky a informačných technológií STU: Dominik Zaťovič, Sebastián Lener, Branislav Trstenský, Martin Hlaváč, Roman Košík, Matúš Koleják a Ľudovít Vitárius. Aj keď máme rozličné skúsenosti a študujeme rôzne odbory, máme aj mnohé spoločné záujmy a skúsenosti a veríme že sme silne kompatibilný a všestranný tím pre témy tímových projektov, ktoré sme si vybrali. Mnohí z nás majú zručnosti nielen zo štúdia ale aj z práce, rôznych mimoškolských aktivít alebo z technických aktivít o ktoré sa zaujímame vo voľnom čase.
         </p>
         <button
           onClick={scrollToTeam}
