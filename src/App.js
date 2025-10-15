@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, Mail } from "lucide-react";
 
 export default function App() {
   const aboutRef = useRef(null);
+  const teamRef = useRef(null);
   const contactRef = useRef(null);
   const [index, setIndex] = useState(0);
 
@@ -18,15 +19,17 @@ export default function App() {
   ];
 
   const scrollToAbout = () => aboutRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToTeam = () => teamRef.current.scrollIntoView({ behavior: "smooth" });
   const scrollToContact = () => contactRef.current.scrollIntoView({ behavior: "smooth" });
 
   const prevMember = () => setIndex((index - 1 + members.length) % members.length);
   const nextMember = () => setIndex((index + 1) % members.length);
 
   return (
-    <div className="font-sans text-gray-100">
+    <div className="font-sans text-gray-100 bg-gradient-to-b from-indigo-700 via-slate-800 to-gray-900">
+
       {/* HERO SECTION */}
-      <section className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-indigo-700 to-slate-800 text-white text-center p-8">
+      <section className="min-h-screen flex flex-col justify-center items-center bg-transparent text-center p-8">
         <motion.h1
           className="text-6xl font-extrabold mb-6 drop-shadow-lg"
           initial={{ opacity: 0, y: -30 }}
@@ -42,14 +45,35 @@ export default function App() {
           onClick={scrollToAbout}
           className="px-8 py-3 bg-white/90 text-blue-700 rounded-full font-semibold shadow hover:scale-105 transition"
         >
-          Meet Us ↓
+          Learn More ↓
         </button>
       </section>
 
-      {/* ABOUT SECTION */}
+      {/* ABOUT US SECTION */}
       <section
         ref={aboutRef}
-        className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-slate-800 to-gray-900 text-center px-6"
+        className="min-h-screen flex flex-col justify-center items-center bg-transparent text-center px-8"
+      >
+        <h2 className="text-4xl font-bold mb-6 text-blue-300">About Us</h2>
+        <p className="max-w-3xl text-gray-200 text-lg leading-relaxed">
+          Team 22 is a group of seven dedicated software engineering students united by curiosity,
+          creativity, and a drive to build meaningful digital experiences. Our mission is to learn,
+          collaborate, and push boundaries in areas such as web development, cloud systems, and
+          AI-assisted solutions. Each of us brings unique skills — from backend logic to user-centered design —
+          and we’re passionate about crafting software that’s elegant, scalable, and fun to use.
+        </p>
+        <button
+          onClick={scrollToTeam}
+          className="mt-12 px-8 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:scale-105 transition"
+        >
+          Meet the Team →
+        </button>
+      </section>
+
+      {/* MEET THE TEAM SECTION */}
+      <section
+        ref={teamRef}
+        className="min-h-screen flex flex-col justify-center items-center bg-transparent text-center px-6"
       >
         <h2 className="text-4xl font-bold mb-10 text-blue-400">Meet the Team</h2>
 
@@ -63,7 +87,7 @@ export default function App() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
-            className="bg-gray-800 rounded-2xl shadow-xl p-8 text-center w-80 mx-6"
+            className="bg-gray-800/60 backdrop-blur-sm rounded-2xl shadow-xl p-8 text-center w-80 mx-6"
           >
             <img
               src={members[index].img}
@@ -80,7 +104,6 @@ export default function App() {
           </button>
         </div>
 
-        {/* Move contact button here */}
         <button
           onClick={scrollToContact}
           className="mt-12 px-8 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:scale-105 transition"
@@ -92,7 +115,7 @@ export default function App() {
       {/* CONTACT SECTION */}
       <section
         ref={contactRef}
-        className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-900 via-gray-900 to-slate-800 text-center px-6"
+        className="min-h-screen flex flex-col justify-center items-center bg-transparent text-center px-6"
       >
         <h2 className="text-4xl font-bold mb-6 text-blue-400">Contact Us</h2>
         <p className="text-gray-300 mb-8 max-w-md">
@@ -112,10 +135,9 @@ export default function App() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-slate-900 py-4 text-center text-sm text-gray-400">
+      <footer className="bg-transparent py-4 text-center text-sm text-gray-400">
         © {new Date().getFullYear()} Team 22 — Software Engineering Students
       </footer>
-
     </div>
   );
 }

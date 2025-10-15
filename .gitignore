@@ -7,6 +7,7 @@
 
 # testing
 /coverage
+just_buffer.js
 
 # production
 /build
