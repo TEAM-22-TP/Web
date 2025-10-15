@@ -1,12 +1,25 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect} from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Mail } from "lucide-react";
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate  } from "react-router-dom";
+import Notes from "./Notes";
 
-export default function App() {
+function Home() {
   const aboutRef = useRef(null);
   const teamRef = useRef(null);
   const contactRef = useRef(null);
   const [index, setIndex] = useState(0);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.state?.scrollTo === "team") {
+      setTimeout(() => {
+        teamRef.current.scrollIntoView({ behavior: "smooth" });
+        navigate(location.pathname, { replace: true, state: {} });
+      }, 300);
+    }
+  }, [location, navigate]);
 
   const members = [
     {
@@ -53,10 +66,7 @@ export default function App() {
     },
   ];
 
-  const scrollToAbout = () => aboutRef.current.scrollIntoView({ behavior: "smooth" });
-  const scrollToTeam = () => teamRef.current.scrollIntoView({ behavior: "smooth" });
-  const scrollToContact = () => contactRef.current.scrollIntoView({ behavior: "smooth" });
-
+  const scrollTo = (ref) => ref.current.scrollIntoView({ behavior: "smooth" });
   const prevMember = () => setIndex((index - 1 + members.length) % members.length);
   const nextMember = () => setIndex((index + 1) % members.length);
 
@@ -65,13 +75,10 @@ export default function App() {
 
       {/* HERO SECTION */}
       <section className="min-h-screen flex flex-col justify-center items-center bg-transparent text-center p-8">
-        <img
-          src="./dataForgeLogo.svg"
-          alt="DataForge Logo"
-        />
+        <img src={process.env.PUBLIC_URL + "/dataForgeLogo.svg"} alt="DataForge logo" />
         <button
-          onClick={scrollToAbout}
-          className="px-8 py-3 bg-white/90 text-blue-700 rounded-full font-semibold shadow hover:scale-105 transition"
+          onClick={() => scrollTo(aboutRef)}
+          className="mt-10 px-8 py-3 bg-white/90 text-blue-700 rounded-full font-semibold shadow hover:scale-105 transition"
         >
           About Us ↓
         </button>
@@ -87,7 +94,7 @@ export default function App() {
           Our team consists of seven master’s students at the Faculty of Informatics and Information Technologies of the Slovak University of Technology: Dominik Zaťovič, Sebastián Lener, Branislav Trstenský, Martin Hlaváč, Roman Košík, Matúš Koleják, and Ľudovít Vitárius. Although we have different backgrounds and study various specializations, we share many common interests and experiences. We believe that we form a highly compatible and versatile team for the group project topics we have chosen. Many of us have skills not only from our studies but also from work experience, extracurricular activities, and technical projects we pursue in our free time.
         </p>
         <button
-          onClick={scrollToTeam}
+          onClick={() => scrollTo(teamRef)}
           className="mt-12 px-8 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:scale-105 transition"
         >
           Meet the Team ↓
@@ -128,12 +135,20 @@ export default function App() {
           </button>
         </div>
 
-        <button
-          onClick={scrollToContact}
-          className="mt-12 px-8 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:scale-105 transition"
-        >
-          Contact Us ↓
-        </button>
+        <div className="mt-12 flex gap-6">
+          <button
+            onClick={() => scrollTo(contactRef)}
+            className="px-8 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:scale-105 transition"
+          >
+            Contact Us ↓
+          </button>
+          <Link
+            to="/notes"
+            className="px-8 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:scale-105 transition"
+          >
+            Notes →
+          </Link>
+        </div>
       </section>
 
       {/* CONTACT SECTION */}
@@ -157,5 +172,16 @@ export default function App() {
         © {new Date().getFullYear()} DataForge — TEAM 22 FIIT
       </footer>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/notes" element={<Notes />} />
+      </Routes>
+    </Router>
   );
 }
