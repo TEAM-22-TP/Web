@@ -66,7 +66,7 @@ export default function App() {
       {/* HERO SECTION */}
       <section className="min-h-screen flex flex-col justify-center items-center bg-transparent text-center p-8">
         <img
-          src="/dataForgeLogo.svg"
+          src="./dataForgeLogo.svg"
           alt="DataForge Logo"
         />
         <button
