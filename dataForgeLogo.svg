@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Transparent background -->
+  <rect width="800" height="400" fill="none"/>
+
+  <!-- Circles with tech names -->
+  <circle cx="270" cy="80" r="55" fill="#F4B25B"/>
+  <text x="270" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="20" fill="white">Python</text>
+
+  <circle cx="460" cy="60" r="55" fill="#8A6BD6"/>
+  <text x="460" y="67" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="20" fill="white">PyTorch</text>
+
+  <circle cx="580" cy="100" r="55" fill="#76B286"/>
+  <text x="580" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="20" fill="white">pandas</text>
+
+  <circle cx="220" cy="280" r="55" fill="#E4935D"/>
+  <text x="220" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="18" fill="white">TensorFlow</text>
+
+  <circle cx="400" cy="320" r="55" fill="#518BCC"/>
+  <text x="400" y="317" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="18" fill="white">IoT</text>
+  <text x="400" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="18" fill="white">Arduino</text>
+
+  <circle cx="580" cy="280" r="55" fill="#48A1B9"/>
+  <text x="580" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="20" fill="white">React.js</text>
+
+  <!-- Central text -->
+  <text x="400" y="210"
+        text-anchor="middle"
+        fill="white"
+        font-size="90"
+        font-weight="800"
+        font-style="italic"
+        font-family="Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+    DataForge
+  </text>
+</svg>
