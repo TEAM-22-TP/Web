@@ -15,7 +15,7 @@ export default function Notes() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-700 via-slate-800 to-gray-900 text-gray-100 flex flex-col justify-center items-center px-8 py-12">
-      <h1 className="text-5xl font-bold text-blue-400 mb-8">Project Notes</h1>
+      <h1 className="text-5xl font-bold text-blue-400 mb-8">Poznámky</h1>
 
       <div className="prose prose-invert max-w-4xl text-gray-200 text-left">
         <ReactMarkdown>{markdown}</ReactMarkdown>
@@ -25,7 +25,7 @@ export default function Notes() {
         onClick={() => navigate("/", { state: { scrollTo: "team" } })}
         className="mt-12 px-8 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:scale-105 transition"
       >
-        ← Back to Home
+        ← Späť na domovskú stránku
       </button>
     </div>
   );

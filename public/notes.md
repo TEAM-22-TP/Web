@@ -1,11 +1,6 @@
 # 09. 10. 2025
 
 ### Organizácie projektu
-- Frontend finalized  
-- Backend integration in progress  
-- Deployment scheduled for next sprint  
-
-### Organizácie projektu
 - Cieľom tímového projektu nie je len vytvoriť produkt, ale hlavne naučiť sa pracovať vo väčších tímoch.
 - Hodnotenie je individuálne podľa plnenia úloh.
 - Team leader je zodpovedný za plnenie úloh a ak ich niekto neplní, tak to má reportovať.

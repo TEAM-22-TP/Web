@@ -22,49 +22,50 @@ function Home() {
   }, [location, navigate]);
 
   const members = [
-    {
-      name: "Matúš Koleják",
-      role: "Team Leader",
-      img: "https://picsum.photos/200?random=1",
-      desc: "He is a developer with experience in Java Spring Boot, API integration, and data processing in enterprise solutions. In his bachelor's thesis, he worked with Wolfram Mathematica on a task generator for linear transformations. He also contributed to software development for MeltFlex (robotic arm control and non-planar 3D printing) and has practical experience with Node.js and SAP CAP while working with SAP Datasphere. He has successfully participated in several hackathons."
+    { 
+      name: "Matúš Koleják", 
+      role: "Team Leader", 
+      img: "https://picsum.photos/200?random=1", 
+      desc: "Je vývojár so skúsenosťami s Java Spring Boot, integráciou API a spracovaním dát v podnikových riešeniach. V bakalárskej práci pracoval s Wolfram Mathematica na generátore úloh pre lineárne transformácie. Venoval sa aj vývoju softvéru pre MeltFlex (riadenie robotického ramena a neplánárna 3D tlač) a má prax s Node.js a SAP CAP pri práci so SAP Datasphere. Úspešne sa zúčastnil viacerých hackathonov." 
     },
-    {
-      name: "Sebastián Lener",
-      role: "Frontend Developer",
-      img: "https://picsum.photos/200?random=2",
-      desc: "He works with PL/SQL and Java (Groovy) and has experience with Business Intelligence solutions in Oracle databases. During his studies, he completed several courses focused on computer and communication networks, which he also utilized when designing a server-side solution for his bachelor's thesis. In that project, he developed a Python-based system for analyzing the Lua programming language, which communicated with the ArangoDB graph database."
+    { 
+      name: "Sebastián Lener", 
+      role: "Frontend Developer", 
+      img: "https://picsum.photos/200?random=2", 
+      desc: "Pracuje s PL/SQL, Javou (Groovy) a má skúsenosti s Business Intelligence riešeniami v Oracle databázach. Počas štúdia absolvoval viacero predmetov zameraných na počítačové a komunikačné siete, čo využil aj pri návrhu serverového riešenia vo svojej bakalárskej práci, v ktorej vyvinul systém v Pythone pre analýzu jazyka Lua, ktorý komunikoval s grafovou databázou ArangoDB." 
     },
-    {
-      name: "Dominik Zaťovič",
-      role: "UI/UX Designer",
-      img: "https://picsum.photos/200?random=3",
-      desc: "He has experience with web technologies and developing neural networks for data analysis. During his studies, he solved multiple algorithmic tasks and projects in Python and C++. In his bachelor's thesis, he worked with Wolfram Mathematica, where he created a task generator focused on graph theory."
+    { 
+      name: "Dominik Zaťovič", 
+      role: "UI/UX Designer", 
+      img: "https://picsum.photos/200?random=3", 
+      desc: "Má skúsenosti s webovými technológiami a tvorbou neurónových sietí na analýzu údajov. V rámci štúdia riešil aj viacero algoritmických úloh a projektov v jazykoch Python a C++. Vo svojej bakalárskej práci pracoval s Wolfram Mathematica, kde vytvoril generátor úloh pre oblasť teórie grafov." 
     },
-    {
-      name: "Ľudovít Vitárius",
-      role: "QA Engineer",
-      img: "https://picsum.photos/200?random=4",
-      desc: "In his bachelor's thesis, he focused on neural networks and has experience with PyTorch, where he implemented his own convolutional WGAN. He can train models using Google Colab and Microsoft Azure and has experience with Wandb and Python, as well as with data analysis libraries such as pandas and scikit-learn. At FIIT, he gained knowledge of Laravel through the WTECH course and experience in data analysis from the IAU course."
+    { 
+      name: "Ľudovít Vitárius", 
+      role: "QA Engineer", 
+      img: "https://picsum.photos/200?random=4", 
+      desc: "Vo svojej bakalárskej práci sa zaujímal o neurónové siete a má skúsenosti s Pytorch, kde implementoval vlastnú konvolučnú WGAN. Vie trénovať siete cez Google Colab a Microsoft Azure. Taktiež má skúsenosti s Wandb a jazykom Python a aj s knižnicami na analýzu dát: pandas a scikit-learn. Na fakulte FIIT nabral znalosti v Laraveli z predmetu WTECH a znalosti o analýze dát z predmetu IAU." 
     },
-    {
-      name: "Branislav Trstenský",
-      role: "DevOps",
-      img: "https://picsum.photos/200?random=5",
-      desc: "He has extensive experience with Python, which he also used in his bachelor's thesis. He worked with libraries such as numpy, pandas, gymnasium, and keras (image classification). In addition, he has experience with backend development in JavaScript/TypeScript (databases, authentication, WebSockets) and frontend in Vue.js. He is also skilled in C# and Java."
+    { 
+      name: "Branislav Trstenský", 
+      role: "DevOps", 
+      img: "https://picsum.photos/200?random=5", 
+      desc: "Má rozsiahle skúsenosti s jazykom Python, ktorý využil aj vo svojej bakalárskej práci. Pracoval s knižnicami numpy, pandas, gymnasium a keras (klasifikácia obrázkov). Okrem toho má skúsenosti s vývojom backendu v JavaScripte/TypeScripte (databázy, autentifikácia, websockety) aj s frontendom vo Vue.js. Zručnosti má aj v C# a Jave." 
     },
-    {
-      name: "Martin Hlaváč",
-      role: "Project Manager",
-      img: "https://picsum.photos/200?random=6",
-      desc: "In his bachelor's thesis, he analyzed the reliability of large language models. He also has knowledge of Python and libraries like pandas and scikit-learn. Furthermore, he can work with C and C++, Bash, and technologies such as Git and Docker. From the OS course, he gained deeper insight into data interaction with software, and thanks to the IAU course, he can effectively process, analyze, and visualize data."
+    { 
+      name: "Martin Hlaváč", 
+      role: "Project Manager", 
+      img: "https://picsum.photos/200?random=6", 
+      desc: "Vo svojej bakalárskej práci analyzoval dôveryhodnosť veľkých jazykových modelov. Okrem toho má znalosti v jazyku Python a knižnicami pandas a scikit-learn. Ďalej dokáže pracovať v jazykoch C a C++, v jazyku Bash a aj s technológiami Git a Docker. Z predmetu OS má hlbšie znalosti o interakcii dát so softvérom a vďaka predmetu IAU dokáže vhodne spracovať, analyzovať a vizualizovať dáta." 
     },
-    {
-      name: "Roman Košík",
-      role: "Data Engineer",
-      img: "https://picsum.photos/200?random=7",
-      desc: "In his bachelor's thesis, he worked with large language models, implementing and comparing the accuracy of text search using vectors and a vector database. He has experience with the PyTorch framework, Google Cloud, and virtual machines. He also has experience developing web applications using frameworks like Vue.js and React.js."
+    { 
+      name: "Roman Košík", 
+      role: "Data Engineer", 
+      img: "https://picsum.photos/200?random=7", 
+      desc: "Vo svojej bakalárskej práci pracoval s veľkými jazykovými modelmi, implementoval a porovnával presnosť textového vyhľadávania pomocou vektorov a vektorovej databázy, má skúsenosti s frameworkom Pytorch, cloudovým prostredím Google a virtuálnymi strojmi. Taktiež má skúsenosti s vývojom webových aplikácií vo frameworkoch Vue.js alebo React.js." 
     },
   ];
+
 
   const scrollTo = (ref) => ref.current.scrollIntoView({ behavior: "smooth" });
   const prevMember = () => setIndex((index - 1 + members.length) % members.length);
@@ -80,7 +81,7 @@ function Home() {
           onClick={() => scrollTo(aboutRef)}
           className="mt-10 px-8 py-3 bg-white/90 text-blue-700 rounded-full font-semibold shadow hover:scale-105 transition"
         >
-          About Us ↓
+          O nás ↓
         </button>
       </section>
 
@@ -89,15 +90,14 @@ function Home() {
         ref={aboutRef}
         className="min-h-screen flex flex-col justify-center items-center bg-transparent text-center px-8"
       >
-        <h2 className="text-4xl font-bold mb-6 text-blue-300">About Us</h2>
+        <h2 className="text-4xl font-bold mb-6 text-blue-300">O nás</h2>
         <p className="max-w-3xl text-gray-200 text-lg leading-relaxed">
-          Our team consists of seven master’s students at the Faculty of Informatics and Information Technologies of the Slovak University of Technology: Dominik Zaťovič, Sebastián Lener, Branislav Trstenský, Martin Hlaváč, Roman Košík, Matúš Koleják, and Ľudovít Vitárius. Although we have different backgrounds and study various specializations, we share many common interests and experiences. We believe that we form a highly compatible and versatile team for the group project topics we have chosen. Many of us have skills not only from our studies but also from work experience, extracurricular activities, and technical projects we pursue in our free time.
-        </p>
+          Náš tím pozostáva zo siedmich študentov inžinierskeho štúdia na Fakulte informatiky a informačných technológií STU: Dominik Zaťovič, Sebastián Lener, Branislav Trstenský, Martin Hlaváč, Roman Košík, Matúš Koleják a Ľudovít Vitárius. Aj keď máme rozličné skúsenosti a študujeme rôzne odbory, máme aj mnohé spoločné záujmy a skúsenosti a veríme že sme silne kompatibilný a všestranný tím pre témy tímových projektov, ktoré sme si vybrali. Mnohí z nás majú zručnosti nielen zo štúdia ale aj z práce, rôznych mimoškolských aktivít alebo z technických aktivít o ktoré sa zaujímame vo voľnom čase.        </p>
         <button
           onClick={() => scrollTo(teamRef)}
           className="mt-12 px-8 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:scale-105 transition"
         >
-          Meet the Team ↓
+          Spoznaj náš tím ↓
         </button>
       </section>
 
@@ -106,7 +106,7 @@ function Home() {
         ref={teamRef}
         className="min-h-screen flex flex-col justify-center items-center bg-transparent text-center px-6"
       >
-        <h2 className="text-4xl font-bold mb-10 text-blue-400">Meet the Team</h2>
+        <h2 className="text-4xl font-bold mb-10 text-blue-400">Spoznaj náš tím</h2>
 
         <div className="flex items-center">
           <button onClick={prevMember} className="p-3 hover:scale-110 transition">
@@ -140,13 +140,13 @@ function Home() {
             onClick={() => scrollTo(contactRef)}
             className="px-8 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:scale-105 transition"
           >
-            Contact Us ↓
+            Kontakt ↓
           </button>
           <Link
             to="/notes"
             className="px-8 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:scale-105 transition"
           >
-            Notes →
+            Poznámky →
           </Link>
         </div>
       </section>
@@ -156,9 +156,9 @@ function Home() {
         ref={contactRef}
         className="min-h-screen flex flex-col justify-center items-center bg-transparent text-center px-6"
       >
-        <h2 className="text-4xl font-bold mb-6 text-blue-400">Contact Us</h2>
+        <h2 className="text-4xl font-bold mb-6 text-blue-400">Kontakt</h2>
         <p className="text-gray-300 mb-8 max-w-md">
-          Feel free to reach out to any of us for project collaboration or questions!
+          Neváhajte nás kontaktovať v prípade akýchkoľvek otázok.
         </p>
         <div className="space-y-3 text-lg">
           <p className="flex items-center justify-center gap-2">
