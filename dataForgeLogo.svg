@@ -11,7 +11,7 @@
   <text x="460" y="67" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="20" fill="white">PyTorch</text>
 
   <circle cx="580" cy="100" r="55" fill="#76B286"/>
-  <text x="580" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="20" fill="white">pandas</text>
+  <text x="580" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="20" fill="white">Pandas</text>
 
   <circle cx="220" cy="280" r="55" fill="#E4935D"/>
   <text x="220" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="18" fill="white">TensorFlow</text>
