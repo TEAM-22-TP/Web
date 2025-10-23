@@ -24,3 +24,40 @@
 
 ### Záver
 - Meeting bude prebiehať znova budúci týždeň v rovnakom čase.
+
+
+# 23. 10. 2025
+
+### Dáta a architektúra
+- Každý senzor má vlastný protokol.  
+- Existuje router/middleware, ktorý zbiera tieto protokoly a prevádza ich do jednotného formátu.  
+- V zadaní projektu sú spomenuté industry-standard technológie — treba sa na ne v analýze pripraviť, aby sme boli ready, keď sa dozvieme, čo sa konkrétne používa.  
+
+### Spracovanie a ukladanie dát
+- Zistiť spôsoby spracovania a ukladania dát — možné riešenia:  
+  - MongoDB  
+  - Cassandra  
+  - Dynamo  
+  - AWS  
+- Preskúmať:
+  - Dáta zo senzorov — aké sú industry protokoly a ako fungujú siete.  
+  - Ako nám dáta prídu (formát, frekvencia, prenosový kanál).  
+  - Kam ich budeme ukladať (databáza, cloud, lokálne riešenie).  
+  - Digitálne dvojčatá v praxi — zistiť, či sa to musí robiť custom, alebo existujú hotové riešenia (aj platené).  
+  - Ako poslať veci z našej dvojičky späť do systému (napr. ovládacie signály).
+
+### Digitálne dvojča
+- Predstavuje zobrazenú reprezentáciu strojov.  
+- Obsahuje digitálne tlačidlá, ktoré ovládajú reálne stroje.  
+- Umožňuje analytiku, predpovedanie a machine learning.  
+- Niektorí to robia priamo v Unity.  
+- V praxi sa to často robí custom riešeniami.
+
+### Organizácia projektu
+- Každý má priradenú úlohu.  
+- Na týždeň je určený počet hodín, ktoré treba odpracovať.  
+- Spolupráca ešte nie je rozbehnutá — projekt sa realizuje ako TP, pretože je to menšie riziko než výskumná skupina.  
+- V zmluve sú definované deliverables (napr. vedecké články).  
+- Ak TP zlyhá, projekt prevezme výskumná skupina.  
+- Ide o výskumný projekt — je možný aj výsledok, že dokážeme, že to nejde spraviť.  
+- Platené riešenia bude hradiť fakulta (s rozumným výsledkom a miere).
