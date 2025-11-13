@@ -61,3 +61,33 @@
 - Ak TP zlyhá, projekt prevezme výskumná skupina.  
 - Ide o výskumný projekt — je možný aj výsledok, že dokážeme, že to nejde spraviť.  
 - Platené riešenia bude hradiť fakulta (s rozumným výsledkom a miere).
+
+# 13. 11. 2025
+
+### Výlet
+- Návšteva výrobnej linky vo firme.  
+- Firma aktuálne nemá dostatočné technologické poznatky v oblasti digitálnych dvojčiat, budeme musieť viac navrhovať riešenia my.  
+- Potrebný brainstorming: aké senzory by sa dali pridať — vo formáte *„ak sa pridá senzor X, získame dáta Y a umožníme funkciu Z“*.  
+- Na mieste treba zistiť, aké senzory sú už nasadené a aká je existujúca infraštruktúra (sieť, servery, PLC, protokoly).  
+- Cieľom je vedieť ingestovať dáta z OPC prostredia (napr. pomocou nástroja typu Eclipse Ditto alebo podobných riešení).  
+- Firma chce **state-of-the-art** riešenie, nie len jednoduchý proof-of-concept.  
+- Na základe výletu sa má spresniť, čo presne treba robiť v projekte (funkčný rozsah, priority, technológie).  
+- Všetci, ktorí idú na výlet, majú poslať, v ktorých hodinách budú chýbať, aby mohla byť vybavená ospravedlnenka.
+
+### Konkrétne tasky
+- **Dokumentácia linky** – spraviť prehľad výrobných krokov, použitých strojov, senzorov a tokov materiálu.  
+- **Analýza vstupných dát** – aké dáta vieme získať (typy senzorov, frekvencia, formáty, protokoly), aké dáta ešte chýbajú.  
+- **Vytvorenie wiki** – spraviť internú dokumentáciu (napr. pomocou MkDocs) pre:
+  - popis linky,  
+  - technickú infraštruktúru,  
+  - dátové toky,  
+  - návrhy možných rozšírení.
+
+### Poznámky
+- Pozrieť koncept **Medallion Architecture** (bronze / silver / gold vrstvy).  
+- Pre náš projekt chceme minimálne **bronze tier** – spoľahlivé ukladanie raw dát v konzistentnom formáte.  
+- Riešenie navrhovať tak, aby podporovalo **realtime** spracovanie dát (čo najnižšia latencia od senzora po vizualizáciu/analytiku).  
+- Do budúcna je cieľom umožniť **ovládanie linky** priamo z našej aplikácie (posielanie spätných povelov do systému).
+
+### Sen
+- **Dlhodobá vízia:** realtime meniť konfiguráciu linky na základe senzorov – napríklad dynamicky upravovať dĺžku varenia podľa veľkosti zemiakov alebo iných parametrov, aby sa optimalizovala kvalita a efektivita výroby.
