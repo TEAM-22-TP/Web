@@ -91,3 +91,59 @@
 
 ### Sen
 - **Dlhodobá vízia:** realtime meniť konfiguráciu linky na základe senzorov – napríklad dynamicky upravovať dĺžku varenia podľa veľkosti zemiakov alebo iných parametrov, aby sa optimalizovala kvalita a efektivita výroby.
+
+
+# 23. 02. 2026
+
+### Architektúra riešenia
+- Prešli sme návrh architektúry nášho riešenia podľa pripraveného diagramu digitálneho dvojčaťa.
+- OPC UA server predstavuje napojenie na linku a translačná vrstva slúži na prevod dát do jednotného interného formátu.
+- V aplikačnej vrstve sme si definovali hlavné komponenty: MQTT broker, ingest worker, databázu, controller a frontend.
+- Architektúra má byť pripravená nielen na zber a vizualizáciu dát, ale aj na budúce posielanie riadiacich povelov späť do systému.
+
+### Dohody
+- Hlavný tok dát bude v smere OPC UA -> translačná vrstva -> MQTT -> ingest worker -> databáza -> frontend.
+- Controller ostáva samostatnou súčasťou pre budúce API a ovládanie linky.
+- Návrh chceme udržať modulárny, aby sme vedeli neskôr vymeniť zdroj dát alebo doplniť ďalšie služby bez veľkého refaktoru.
+
+
+# 09. 03. 2026
+
+### Kontrola implementácie
+- Prešli sme aktuálny stav implementácie a porovnali ho s pôvodným plánom.
+- Máme pripravený základ pipeline vrátane mock OPC UA servera, translačnej vrstvy, ingestu, databázy a vizualizačnej časti.
+- Súčasťou riešenia je aj interná wiki, ktorú sme implementovali pomocou AnythingLLM, aby sme na jednom mieste zbierali poznatky o linke a strojoch.
+- Po diskusii bolo zrejmé, že v dohľadnom čase nebudeme mať prístup k reálnym prevádzkovým dátam.
+
+### Rozhodnutia
+- Keďže reálne dáta nebudú k dispozícii, musíme implementovať vlastný mock data server, na ktorom budeme vedieť overovať celé riešenie.
+- Mock dáta majú pokrývať bežnú prevádzku aj chybové a hraničné scenáre.
+- Rozhrania chceme navrhnúť čo najbližšie k očakávanému reálnemu nasadeniu, aby bol neskorší prechod jednoduchý.
+
+
+# 23. 03. 2026
+
+### Dockerizácia a deployment
+- Hlavnou témou bolo zjednotenie spúšťania celého riešenia cez Docker a Docker Compose.
+- Riešili sme kontajnerizáciu jednotlivých častí systému tak, aby sa dali spoľahlivo spustiť aj mimo development prostredia.
+- Dohodli sme sa, že pripravíme deployment na školou určený server, kde bude možné ukázať funkčné nasadenie riešenia.
+- Bolo potrebné oddeliť lokálne development nastavenia od konfigurácie pre serverové nasadenie.
+
+### Dohody
+- Každá služba má mať jasne definované porty, volume mounty, environment variables a spôsob štartu.
+- Nasadenie na školský server má byť reprodukovateľné podľa stručného postupu, aby sa dalo jednoducho zopakovať.
+- Pred ostrým deploymentom treba otestovať správanie systému po reštarte kontajnerov a pri výpadku vybraných služieb.
+
+
+# 20. 04. 2026
+
+### Feedback k prezentácii
+- Dostali sme spätnú väzbu k prezentácii nášho riešenia a k tomu, ako komunikujeme jeho prínos.
+- Bolo odporučené jasnejšie oddeliť, čo je už implementované, čo je prototyp a čo je zatiaľ iba plán do ďalších etáp.
+- Máme výraznejšie vysvetliť, prečo sme museli prejsť na mock dáta a aký význam má vlastný mock server pre vývoj a testovanie.
+- V prezentácii treba lepšie ukázať architektúru systému, tok dát medzi komponentmi a prínos internej wiki pre tím.
+
+### Úpravy do ďalšej verzie
+- Doplniť konkrétnu ukážku pipeline od OPC UA vrstvy až po frontend.
+- Pridať stručný slide o dockerizácii a pripravenosti deploymentu na školský server.
+- Skrátiť všeobecný úvod a viac priestoru venovať tomu, čo sme reálne implementovali.
