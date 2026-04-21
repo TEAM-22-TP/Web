@@ -142,8 +142,4 @@
 - Bolo odporučené jasnejšie oddeliť, čo je už implementované, čo je prototyp a čo je zatiaľ iba plán do ďalších etáp.
 - Máme výraznejšie vysvetliť, prečo sme museli prejsť na mock dáta a aký význam má vlastný mock server pre vývoj a testovanie.
 - V prezentácii treba lepšie ukázať architektúru systému, tok dát medzi komponentmi a prínos internej wiki pre tím.
-
-### Úpravy do ďalšej verzie
-- Doplniť konkrétnu ukážku pipeline od OPC UA vrstvy až po frontend.
-- Pridať stručný slide o dockerizácii a pripravenosti deploymentu na školský server.
-- Skrátiť všeobecný úvod a viac priestoru venovať tomu, čo sme reálne implementovali.
+- Doplniť aj našu implementáciu AnythingLLM
