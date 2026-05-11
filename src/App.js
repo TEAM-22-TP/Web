@@ -165,6 +165,12 @@ function Home() {
             <Mail size={20} className="text-blue-400" /> team22@gmail.com
           </p>
         </div>
+        <button
+          onClick={() => scrollTo(aboutRef)}
+          className="mt-12 px-8 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:scale-105 transition"
+        >
+          O nás ↑
+        </button>
       </section>
 
       {/* FOOTER */}

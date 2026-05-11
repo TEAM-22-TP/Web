@@ -143,3 +143,55 @@
 - Máme výraznejšie vysvetliť, prečo sme museli prejsť na mock dáta a aký význam má vlastný mock server pre vývoj a testovanie.
 - V prezentácii treba lepšie ukázať architektúru systému, tok dát medzi komponentmi a prínos internej wiki pre tím.
 - Doplniť aj našu implementáciu AnythingLLM
+
+
+# 29. 04. 2026
+
+### TP Cup
+- Na TP Cupe sme prezentovali naše riešenie digitálneho dvojčaťa a ukázali sme aktuálnu architektúru systému.
+
+
+# 11. 05. 2026
+
+### Zhrnutie našej práce
+- Prešli sme jednotlivé komponenty riešenia a zhrnuli sme, akú úlohu majú v celkovej architektúre digitálneho dvojčaťa.
+- Zamerali sme sa na to, čo je už implementované, čo slúži ako prototyp a ktoré časti sú pripravené na rozšírenie v ďalšej fáze.
+
+### Mock OPC UA server
+- Simuluje zdroj dát z výrobnej linky a poskytuje premenné cez OPC UA endpoint.
+- Generuje meniace sa hodnoty senzorov, vďaka čomu vieme testovať pipeline aj bez prístupu k reálnym dátam.
+
+### Translačná vrstva
+- Pripája sa na OPC UA server ako klient, sleduje nakonfigurované uzly a prijíma zmeny hodnôt.
+- Prekladá OPC UA dáta do jednotného interného JSON formátu a publikuje ich do MQTT.
+
+### MQTT broker
+- Slúži ako sprostredkovateľ správ medzi translačnou vrstvou a ďalšími komponentmi.
+- Umožňuje oddeliť zdroj dát od spracovania, aby sa dali komponenty meniť alebo rozširovať samostatne.
+
+### Ingest worker
+- Odoberá správy z MQTT topicov a validuje ich pred uložením.
+- Mapuje zdrojové identifikátory zo správy na interné senzory a zapisuje merania do databázy.
+
+### Databáza
+- Uchováva model linky, senzory, mapovania zdrojov a namerané hodnoty.
+- Je pripravená na časové dáta a umožňuje neskoršiu analytiku, filtrovanie a vizualizáciu meraní.
+
+### Frontend
+- Poskytuje používateľské rozhranie tímovej stránky a prezentuje informácie o projekte.
+- Slúži aj ako základ pre budúcu vizualizáciu stavu linky a dát z digitálneho dvojčaťa.
+
+### Wiki / AnythingLLM
+- Zhromažďuje interné poznatky o výrobnej linke, architektúre a technológiách.
+- Pomáha tímu rýchlejšie vyhľadávať informácie a pripraviť sa na ďalší vývoj riešenia.
+
+### Budúca práca
+- Ďalším krokom bude napojiť riešenie na skutočné dáta z výrobnej linky namiesto mock OPC UA servera.
+- Pridať nový komponent controller, ktorý bude kontrolovať stav linky a automatizovane odosielať control správy na OPC UA server na riadenie strojov.
+
+
+# 18. 05. 2026
+
+### Príprava na odovzdanie
+- Skontrolovať, či sú všetky časti projektu spustiteľné, zdokumentované a pripravené na ukážku.
+- Overiť konzistentnosť webovej stránky, poznámok, architektúrneho diagramu a popisu implementovaných komponentov.
